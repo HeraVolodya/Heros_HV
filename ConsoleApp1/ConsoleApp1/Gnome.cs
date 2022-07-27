@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Gnome
+    public class Gnome : Warrior 
     {
+        public Gnome() 
+        {
+            raceWarior = "Gnome";
+            nameWarior = "Gimly";
+            armorWarior = 85.0 * (0.5 * powercoefficients); 
+            healthWarior = 100.0;
+            impactforceWarior = 75.0 * powercoefficients;
+        }
     }
 }

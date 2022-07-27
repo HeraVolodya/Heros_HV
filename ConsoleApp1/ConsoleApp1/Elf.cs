@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Elf
+    public class Elf : Warrior 
     {
+
+        public Elf() 
+        {
+            raceWarior = "Elf";
+            nameWarior = "Greenleaf";
+            armorWarior = 70.0 * (0.5 * powercoefficients);
+            healthWarior = 100.0;
+            impactforceWarior = 80.0 * powercoefficients;
+        }
     }
 }
+

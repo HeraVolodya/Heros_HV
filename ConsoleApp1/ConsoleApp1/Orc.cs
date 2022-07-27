@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Orc
+    public class Orc : Warrior 
     {
+        public Orc() 
+        {
+            raceWarior = "Orc";
+            nameWarior = "Grasimov";
+            armorWarior = 10.0 * (0.5 * powercoefficients);
+            healthWarior = 100.0;
+            impactforceWarior = 30.0 * powercoefficients;
+        }
     }
 }
+
