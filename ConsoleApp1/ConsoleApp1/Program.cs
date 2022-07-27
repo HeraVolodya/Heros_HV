@@ -8,13 +8,16 @@ namespace ConsoleApp1
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             
             // Вибір гравцем персонажу
             var power = new Battlefield();
+            
             double powerHero1 = 0;
             double powerHero2 = 0;
+
             double healthHero1 = 0;
             double healthHero2 = 0;
 
@@ -94,12 +97,13 @@ namespace ConsoleApp1
             void Fight()
             {
                 int raund = 0;
+
                 do
                 {
                     raund++;
-                    healthHero1 =  healthHero2 - powerHero1;
+                    healthHero1 -= powerHero2;
                     Console.WriteLine($"damage Hero1 {healthHero1}");
-                    healthHero2 =  healthHero1 - powerHero2;
+                    healthHero2 -= powerHero1;
                     Console.WriteLine($"damage Hero2 {healthHero2}");
                     Console.WriteLine($"raund {raund}");
                     
@@ -112,7 +116,7 @@ namespace ConsoleApp1
                     {
                         Console.WriteLine("player TWO WINS !!!!");
                     }
-                } while (healthHero1 < 0 || healthHero2 < 0);
+                } while (healthHero1 > 0 && healthHero2 > 0);
 
             }
             Console.WriteLine();
